@@ -7,10 +7,10 @@ phases:
     commands:
     - echo Logging in to Amazon ECR...
     - aws --version
-    - aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 274201610284.dkr.ecr.eu-west-2.amazonaws.com
-    - IMAGE_NAME=authorization-service
-    - IMAGE_URI=274201610284.dkr.ecr.eu-west-2.amazonaws.com/authorization-service:latest
-    - CONTAINER_NAME=authorization-service
+    - aws ecr get-login-password --region ap-southeast-2 | docker login --username AWS --password-stdin 274201610284.dkr.ecr.ap-southeast-2.amazonaws.com
+    - IMAGE_NAME=process-pension-service
+    - IMAGE_URI=274201610284.dkr.ecr.ap-southeast-2.amazonaws.com/process-pension-service:latest
+    - CONTAINER_NAME=process-pension-service
   build:
     commands:
     - echo Build started on `date`
